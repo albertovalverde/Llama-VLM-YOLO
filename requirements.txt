@@ -1,0 +1,4 @@
+Flask==2.1.2
+open-interpreter
+Werkzeug==2.0.3
+

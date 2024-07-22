@@ -1,0 +1,44 @@
+# Dockerfile actualizado
+
+# Utiliza una imagen base oficial de Python
+FROM python:3.9-slim
+
+# Establece el directorio de trabajo en el contenedor
+WORKDIR /app
+
+# Instala dependencias del sistema necesarias para la compilación de paquetes Python
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    python3-dev \
+    git \
+    wget \
+    curl \
+    cmake \
+    swig \
+    && apt-get clean
+
+# Copia los archivos de tu aplicación al contenedor
+COPY . /app
+
+# Instala pip
+RUN pip install --upgrade pip
+
+# Instala una versión específica de Werkzeug
+RUN pip install Werkzeug==2.0.3
+
+# Instala Flask y Open Interpreter
+RUN pip install Flask==2.1.2
+RUN pip install open-interpreter
+
+# Clona e instala LLaMA 3
+RUN git clone https://github.com/meta-llama/llama3.git /tmp/llama3 \
+    && cd /tmp/llama3 \
+    && pip install -e .
+
+# Expone el puerto en el que correrá la aplicación Flask
+EXPOSE 5000
+
+# Comando para ejecutar la aplicación
+CMD ["python", "app.py"]
