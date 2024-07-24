@@ -1,69 +1,28 @@
-# llama3
-LLaMa 3  lab
+### LLaMa 3 - FREE AND LOCAL - CHATGPT clone
 
+<img src="https://github.com/lefevbre-organization/llama3/blob/main/ia.jpg" width="400">
 
+### Experiment Workflow Description
 
-```markdown
-# Docker Project: LLaMA 3 and Flask Application
+This experiment integrates Ollama with the LLaMa3 model running locally in Docker, exposing an API at `:11434/api/generate`. Additionally, there is another container running a Python Flask API that calls the Ollama API. We have a client installed as an add-on in Google Gmail for seamless integration.
 
-This repository contains Dockerfiles and instructions to run two Docker containers: one for LLaMA 3 and another for a Python application with Flask that consumes the API exposed by LLaMA 3.
+#### Workflow Steps:
+1. Set up the Docker environment to run the LLaMa3 model with Ollama integration.
+2. Expose the RESTful API endpoint `:11434/api/generate` for the LLaMa3 model.
+3. Implement a Python Flask API in another container to interact with the Ollama API.
+4. Stabilize connectivity between the Flask API and Ollama for data processing.
+5. Install the custom client add-on in Google Gmail for streamlined communication with the integrated system.
 
-## Running the Containers
+**Use Case:**
+- **Scenario:** A user selects an email and uses a text box to input a prompt "I want an automatic response to be written and saved as a draft."
+  
+**Next Steps (To-Do):**
+- Implement an "Open interpreter" for the automatic execution of tasks using the LLM of LLaMa3 via [Open Interpreter](https://www.openinterpreter.com).
 
-### Building and Running the LLaMA 3 Container
+**Additional Use Case with Open interpreter:**
+- **Scenario:** A user requests that the selected email, which has a PDF attachment, be converted to DOCX format.
 
-```bash
-# Build and run the LLaMA 3 container
-docker build -t ollama-container .
-docker run -p 11434:11434 ollama-container
-```
-
-### Building and Running the Python and Flask Container to Consume the API
-
-```bash
-# Build and run the Python and Flask container
-docker build -t flask-app .
-docker run -p 5000:5000 flask-app
-```
-
-### Running Containers with Docker Compose
-
-To run both containers together using Docker Compose:
-
-1. Create a `docker-compose.yml` file in your project directory with the following content:
-
-```yaml
-version: '3.8'
-
-services:
-  llama3:
-    build:
-      context: .
-      dockerfile: Dockerfile-ollama
-    ports:
-      - "11434:11434"
-
-  flaskapp:
-    build:
-      context: .
-      dockerfile: Dockerfile-flask
-    ports:
-      - "5000:5000"
-    depends_on:
-      - llama3
-```
-
-2. Run the following command in the directory containing `docker-compose.yml`:
-
-```bash
-docker-compose up
-```
-
-## Repository Structure
-
-- `Dockerfile-ollama`: Dockerfile for the LLaMA 3 container.
-- `Dockerfile-flask`: Dockerfile for the Python and Flask container.
-- `app.py`: Script containing the Flask application that consumes LLaMA 3 API.
+This workflow represents a seamless interaction between Ollama, LLaMa3 model, Python Flask API, Google Gmail add-on, and Open Interpreter for optimized experimental outcomes.
 - Other necessary files and directories for your application.
 
 ## Contributions
