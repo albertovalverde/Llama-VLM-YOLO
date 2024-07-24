@@ -1,0 +1,17 @@
+# Utiliza la imagen base "python:3.9"
+FROM python:3.9
+
+WORKDIR /app
+
+# Copia el archivo requirements.txt e instala las dependencias
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# Copia los archivos de tu aplicación al contenedor
+COPY . .
+
+# Exponer el puerto en el que correrá la aplicación Flask
+EXPOSE 5000
+
+# Comando para ejecutar la aplicación Flask
+CMD ["python", "app.py"]

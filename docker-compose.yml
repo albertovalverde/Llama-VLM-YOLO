@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  llama:
+    image: ollama/ollama
+    volumes:
+      - /root/.ollama
+    ports:
+      - "11434:11434"
+
+  flask_app:
+    build: .
+    ports:
+      - "5000:5000"
+    
