@@ -1,5 +1,7 @@
 ### Meta AI LLaMa3 and YOLO Integration on Raspberry Pi 5 Board for Visual Language Model (VLM)
 
+![Raspberry Pi 5 Board](link_to_image)
+
 #### Project Overview
 
 In this revised approach, we aim to integrate LLaMa3 and YOLO on the Raspberry Pi 5 board to enhance the Visual Language Model (VLM) capabilities. Alongside this integration, we will enable the Raspberry Pi camera to capture images and videos for improving the VLM functionality.
