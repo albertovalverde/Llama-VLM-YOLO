@@ -1,20 +1,21 @@
-### Meta AI-powered Llama 3 research
+### Meta AI LLaMa3 and YOLO Integration on Raspberry Pi 5 Board for Visual Language Model (VLM)
 
-<img src="https://github.com/lefevbre-organization/llama3/blob/main/ia.jpg" width="400">
+#### Project Overview
 
-### Experiment Workflow Description
+In this revised approach, we aim to integrate LLaMa3 and YOLO on the Raspberry Pi 5 board to enhance the Visual Language Model (VLM) capabilities. Alongside this integration, we will enable the Raspberry Pi camera to capture images and videos for improving the VLM functionality.
 
-This experiment integrates Ollama with the LLaMa3 model running locally in Docker, exposing an API at `:11434/api/generate`. Additionally, there is another container running a Python Flask API that calls the Ollama API. We will establish an interface through a Raspberry Pi 5 with an AI kit, commonly used for robotics applications.
+#### Project Steps:
 
-#### Workflow Steps:
-1. Set up the Docker environment to run the LLaMa3 model with Ollama integration.
-2. Expose the RESTful API endpoint `:11434/api/generate` for the LLaMa3 model.
-3. Implement a Python Flask API in another container to interact with the Ollama API.
-4. Stabilize connectivity between the Flask API and Ollama for data processing.
-5. Enable access to the integrated system through a Raspberry Pi 5 with an AI kit for streamlined communication and control.
+1. Configure the Raspberry Pi 5 board environment for running LLaMa3 and setting up YOLO integration.
+2. Integrate the Raspberry Pi camera for image and video capture crucial for the VLM.
+3. Install and configure the YOLO framework on the Raspberry Pi 5 board for robust object detection and recognition.
+4. Enhance language generation capabilities by integrating the LLM through LLaMa 3.
+5. Ensure seamless interaction and synchronization between LLaMa3, YOLO.
+6. Conduct extensive testing to validate the successful integration and functionality of the system.
 
-  
 **Next Steps (To-Do):**
-- Implement an "Open interpreter" for the automatic execution of tasks using the LLM of LLaMa3 via [Open Interpreter](https://www.openinterpreter.com).
+- Implement efficient tasks and continuous learning methods for VLM enhancement.
+- Explore new strategies for seamless integration and fine-tuning of the VLM processes.
+- Enhance system performance to optimize speed and accuracy for VLM operations.
 
-This workflow showcases the seamless integration of Ollama, LLaMa3 model, Python Flask API, and the Raspberry Pi 5 with AI kit, leveraging Open Interpreter for optimized experimental outcomes in a robotics-oriented context.
+This project focuses on integrating LLaMa3 and YOLO on the Raspberry Pi 5 board, using the Raspberry Pi camera to bolster VLM capabilities and incorporating the LLM through LLaMa to advance language generation within the system.
