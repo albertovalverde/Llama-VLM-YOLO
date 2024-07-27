@@ -1,4 +1,4 @@
-### AI-powered Llama 3 research
+### Meta AI-powered Llama 3 research
 
 <img src="https://github.com/lefevbre-organization/llama3/blob/main/ia.jpg" width="400">
 
