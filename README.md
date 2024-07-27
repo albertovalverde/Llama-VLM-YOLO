@@ -1,6 +1,6 @@
 ### Meta AI LLaMa3 and YOLO Integration on Raspberry Pi 5 Board for Visual Language Model (VLM)
 
-<img src="https://github.com/lefevbre-organization/llama3/blob/main/ia.png" width="400">
+<img src="https://github.com/albertovalverde/llama3/blob/main/ia.png" width="400">
 
 #### Project Overview
 
