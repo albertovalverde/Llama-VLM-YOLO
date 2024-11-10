@@ -1,4 +1,4 @@
-### LLaMa3 and YOLO Integration on Raspberry Pi 5 Board for Visual Language Model (VLM)
+### Llama (LLM) and YOLO Integration on Raspberry Pi 5 Board for Visual Language Model (VLM)
 
 <img src="https://github.com/albertovalverde/llama3/blob/main/AI2.png" width="400">
 
